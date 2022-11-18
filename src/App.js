@@ -23,10 +23,17 @@ function App({ login }){
     if(!data) return null;
 
       return <div>
-        
+        <h1>{data.name}</h1>
+        <h1>{data.bio}</h1>
+        <h1>{data.location}</h1>
+        <h1>{data.company}</h1>
+        <img alt={data.login} src={data.avatar_url}/>
+        <button onClick={sayHello}>Say Hello!</button>
       </div>
-
 }
 
+function sayHello() {
+  alert("Hello there! I bet you're enjoying this!");
+}
 
 export default App;
